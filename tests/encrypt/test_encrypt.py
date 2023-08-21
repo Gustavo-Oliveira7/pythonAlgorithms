@@ -9,5 +9,4 @@ def test_encrypt_message():
     assert encrypt_message('word', 3) == 'wor_d'
     with pytest.raises(TypeError, match="tipo inválido para key"):
         encrypt_message('word','word')
-
-    pass
+        
