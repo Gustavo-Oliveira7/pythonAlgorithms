@@ -4,6 +4,6 @@ def study_schedule(permanence_period, target_time):
         try:
             if i[0] <= target_time <= i[1]:
                 count += 1
-        except:
+        except (TypeError):
             return None
     return count
