@@ -22,18 +22,18 @@ def is_not_anagram(first_string, second_string):
 def my_sort(string):
     if len(string) <= 1:
         return string
-    
+
     mid = len(string) // 2
     left = my_sort(string[:mid])
     right = my_sort(string[mid:])
-    
+
     return merge(left, right)
 
 
 def merge(left, right):
     result = []
     x = y = 0
-    
+
     while x < len(left) and y < len(right):
         if left[x] < right[y]:
             result.append(left[x])
@@ -41,8 +41,7 @@ def merge(left, right):
         else:
             result.append(right[y])
             y += 1
-    
+
     result.extend(left[x:])
     result.extend(right[y:])
     return ''.join(result)
-
